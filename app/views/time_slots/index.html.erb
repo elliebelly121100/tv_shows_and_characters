@@ -1,0 +1,31 @@
+<h1>Time slots</h1>
+
+<p><a href="/new_time_slot">Add a New Time Slot</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tvshow</th>
+      <th>Network</th>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @time_slots.each do |time_slot| %>
+    <tr>
+          <td><%= time_slot.TVShow_id %></td>
+          <td><%= time_slot.network_id %></td>
+          <td><%= time_slot.time %></td>
+          <td><a href="/time_slots/<%= time_slot.id %>">Show</a>
+        </td>
+      <td><a href="/time_slots/<%= time_slot.id %>/edit">Edit</a></td>
+      <td><a href="/time_slots/<%= time_slot.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

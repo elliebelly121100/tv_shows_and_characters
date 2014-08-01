@@ -1,0 +1,28 @@
+<h1>TV shows</h1>
+
+<p><a href="/new_tv_show">Add a New Tv Show</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @tv_shows.each do |tv_show| %>
+    <tr>
+      <td> <a href="/tv_shows/<%= tv_show.id %>"><%= tv_show.title %> </a></td>
+          <td><%= tv_show.description %></td>
+          <td><a href="/tv_shows/<%= tv_show.id %>">Show</a>|</td>
+      <td><a href="/tv_shows/<%= tv_show.id %>/edit">Edit</a>|</td>
+      <td><a href="/tv_shows/<%= tv_show.id %>/destroy">Destroy</a></td> 
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

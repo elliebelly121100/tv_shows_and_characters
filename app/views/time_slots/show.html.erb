@@ -1,0 +1,17 @@
+<h1>Time Slot #<%= @time_slot.id %></h1>
+
+<div>
+  <strong>Tvshow</strong>:<br />
+  <p><%= @time_slot.TVShow_id %></p>
+</div>
+<div>
+  <strong>Network</strong>:<br />
+  <p><%= @time_slot.network_id %></p>
+</div>
+<div>
+  <strong>Time</strong>:<br />
+  <p><%= @time_slot.time %></p>
+</div>
+
+<a href="/time_slots/<%= @time_slot.id %>/edit">Edit</a> |
+<a href="/time_slots/<%= @time_slot.id %>/destroy">Destroy</a>

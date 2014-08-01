@@ -1,0 +1,31 @@
+<h1>Actor #<%= @actor.id %></h1>
+
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @actor.name %></p>
+</div>
+<div>
+  <strong>Image</strong>:<br />
+  <img class="image"src="<%= @actor.img %>">
+</div>
+<div>
+ 
+    <strong>Characters</strong>
+<% @actor.characters.each do |character| %>
+  <ul>
+    <li><a href="/characters/<%= character.id %>"><%= character.name %></a> from <a href="/tv_shows/<%= character.tv_show.id %>"><%= character.tv_show.title %></a></li>
+  </ul>
+  <% end %>
+  
+  <strong>TV Shows</strong>:<br />
+  <% @actor.characters.each do |character| %>
+  
+  <ul>
+    <li><a href="/tv_shows/<%= character.tv_show.id %>"><%= character.tv_show.title %></a></li>
+  </ul>
+  <% end %>
+</div>
+
+
+<a href="/actors/<%= @actor.id %>/edit">Edit</a>  |
+<a href="/actors/<%= @actor.id %>/destroy">Destroy</a>

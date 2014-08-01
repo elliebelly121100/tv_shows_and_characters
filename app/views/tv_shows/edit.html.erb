@@ -1,0 +1,17 @@
+<h1>Editing Tv Show #<%= @tv_show.id %></h1>
+
+<form action="/tv_shows/<%= @tv_show.id %>/update">
+  <div>
+    <label for="title">title</label><br />
+    <input id="title" name="title" value="<%= @tv_show.title  %>" type="text" />
+  </div>
+  <div>
+    <label for="description">description</label><br />
+    <input id="description" name="description" value="<%= @tv_show.description  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

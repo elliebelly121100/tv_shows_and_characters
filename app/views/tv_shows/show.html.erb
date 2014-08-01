@@ -1,0 +1,23 @@
+<h1>Tv Show #<%= @tv_show.id %></h1>
+
+<div>
+  <strong>Title</strong>:<br />
+  <p><%= @tv_show.title %></p>
+</div>
+<div>
+  <strong>Description</strong>:<br />
+  <p><%= @tv_show.description %></p>
+</div>
+<div>
+  <strong>Actors</strong>:<br />
+  <% @tv_show.characters.each do |character| %>
+  <ul>
+    <li><a href="/actors/<%= character.actor.id %>"><%= character.actor.name %></a></li>
+    <li><img class="image" src= "<%= character.actor.img %>"></li>
+    <li>He/she plays <%= character.name %> </li>
+  </ul>
+  <% end %>
+</div>
+
+<a href="/tv_shows/<%= @tv_show.id %>/edit">Edit</a> |
+<a href="/tv_shows/<%= @tv_show.id %>/destroy">Destroy</a>

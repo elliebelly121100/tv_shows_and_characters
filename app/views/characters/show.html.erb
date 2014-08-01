@@ -1,0 +1,17 @@
+<h1>Character #<%= @character.id %></h1>
+
+<div>
+  <strong>Actor</strong>:<br />
+  <p><a href="/actors/<%= @character.actor.id %>"><%= @character.actor.name %></a></p>
+</div>
+<div>
+  <strong>TV Show</strong>:<br />
+  <p><a href="/tv_shows/<%= @character.tv_show.id %>"><%= @character.tv_show.title %></a></p>
+</div>
+<div>
+  <strong>Name</strong>:<br />
+  <p><%= @character.name %></p>
+</div>
+
+<a href="/characters/<%= @character.id %>/edit">Edit</a> |
+<a href="/characters/<%= @character.id %>/destroy">Destroy</a>

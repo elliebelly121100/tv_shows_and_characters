@@ -1,0 +1,21 @@
+<h1>Editing Time Slot #<%= @time_slot.id %></h1>
+
+<form action="/time_slots/<%= @time_slot.id %>/update">
+  <div>
+    <label for="TVShow_id">TVShow_id</label><br />
+    <input id="TVShow_id" name="TVShow_id" value="<%= @time_slot.TVShow_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="network_id">network_id</label><br />
+    <input id="network_id" name="network_id" value="<%= @time_slot.network_id  %>" type="text" />
+  </div>
+  <div>
+    <label for="time">time</label><br />
+    <input id="time" name="time" value="<%= @time_slot.time  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+
